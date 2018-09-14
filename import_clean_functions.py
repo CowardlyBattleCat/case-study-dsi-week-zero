@@ -13,7 +13,8 @@ def clean_data(data, cleaning_function):
     return [cleaning_function(row) for row in data]
 
 def clean_square_footage(row):
+    """Function to clean 'SqFtTotLiving' of a single dictionary. Intended to be passed to clean_data function."""
     out_row = row.copy()
-    for key, val in out_row.items:
+    for key, val in out_row.items():
         out_row['SqFtTotLiving'] = int(out_row['SqFtTotLiving'])
     return out_row
