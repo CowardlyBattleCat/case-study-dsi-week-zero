@@ -36,7 +36,27 @@ def clean_date(row):
     return output
 
 def clean_sales_price(row):
-   """Function to clean 'SalePrice' of a single dictionary. Intended to be passed to clean_data function."""
+   """Function to clean 'SalePrice' of a single dictionary. Intended to be
+   passed to clean_data function."""
    out_row = row.copy()
    out_row['SalePrice'] = int(out_row['SalePrice'])
    return out_row
+
+def make_dict_of_dicts(list_of_dicts, unique_id):
+    """Function to take a list of dictionaries and return a dictionary of
+    dictionaries with (keys = unique value IDs) and (values = each original
+    dictionary)."""
+    dod = {}
+    for row in list_of_dicts:
+        dod[row[unique_id]] = row
+    return dod
+
+def intersection_of_dicts(dod1, dod2):
+    """Function to take two dictionaries and return their intersection as a new
+    dictionary."""
+    dod3 = {}
+    for key in (set(dod1) & set(dod2)):
+        new_row = dod1[key].copy()
+        new_row.update(dod2[key])
+        dod3[key] = new_row
+    return dod3
