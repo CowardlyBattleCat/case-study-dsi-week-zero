@@ -1,4 +1,5 @@
 .DS_Store
 kc_assessors_data_docs/.DS_Store
+.ipynb_checkpoints
 EXTR_ResBldg.csv
 EXTR_RPSale.csv
