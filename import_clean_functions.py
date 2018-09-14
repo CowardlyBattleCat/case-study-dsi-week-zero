@@ -60,3 +60,16 @@ def intersection_of_dicts(dod1, dod2):
         new_row.update(dod2[key])
         dod3[key] = new_row
     return dod3
+
+def make_list_of_lists(dict_of_dicts):
+    """(A not yet working) function to take a dict of dicts as
+    input and return a matrix with the first row being a header."""
+    matrix = []
+    header = list(next(dict_of_dicts.values()).keys())
+    matrix.append(header)
+    for val_dict in dict_of_dicts.keys():
+        row = []
+        for val in val_dict.keys():
+            row.extend(val)
+        matrix.append([row])
+    return matrix
