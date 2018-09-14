@@ -1,2 +1,2 @@
 # case-study-dsi-week-zero
-For version control in the DSI week zero case study.
+Repo for Group Prairie Dog. For version control in the DSI week zero case study.
