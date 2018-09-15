@@ -1,5 +1,6 @@
 .DS_Store
 kc_assessors_data_docs/.DS_Store
 .ipynb_checkpoints
+__pycache__/import_clean_functions.cpython-36.pyc
 EXTR_ResBldg.csv
 EXTR_RPSale.csv
